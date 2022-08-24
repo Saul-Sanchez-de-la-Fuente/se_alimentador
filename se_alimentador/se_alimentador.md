@@ -31,6 +31,8 @@ A continuación se hace un reporte de los materiales, las librerías y el desarr
 
 ```C++
 
+// Librerias necesarias
+
 #include <WiFi.h>
 #include <WiFiClientSecure.h>
 #include <ESP32Servo.h>
@@ -38,13 +40,13 @@ A continuación se hace un reporte de los materiales, las librerías y el desarr
 #include <ESP32Tone.h>
 #include <ESP32PWM.h>
 
-#include <UniversalTelegramBot.h>
-#include <ArduinoJson.h>
+#include <UniversalTelegramBot.h> // Añadir como libreria .ZIP
+#include <ArduinoJson.h> // Buscar entre las librerías online de arduino
 
 
 Servo myservo;
 
-static const int servoPin = 18;
+static const int servoPin = 18; //PIN
 
 // Reemplazar con tus credenciales de Wifi
 const char* ssid     = "Nombre";
@@ -62,13 +64,13 @@ UniversalTelegramBot bot(BOTtoken, client);
 void handleNewMessages(int numNewMessages) {
 
   for (int i=0; i<numNewMessages; i++) {
-    // Chat id of the requester
+    // Verificación del usuario
     String chat_id = String(bot.messages[i].chat_id);
     if (chat_id != CHAT_ID){
       bot.sendMessage(chat_id, "Usuario no autorizado", "");
       continue;
     }
-
+    // Petición de comando en Telegram
     String text = bot.messages[i].text;
 
     if (text == "/comida") {

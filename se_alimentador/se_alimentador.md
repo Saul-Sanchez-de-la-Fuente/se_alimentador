@@ -1,6 +1,6 @@
 # Alimentador de Perros 
 
-A continuacion se hace un reprote de los materiales, las librerias y el desarrollo sobre el alimentador de mascotas a travez de un bot mediante una conexion a internet
+A continuación se hace un reporte de los materiales, las librerías y el desarrollo sobre el alimentador de mascotas a través de un bot mediante una conexión a internet.
 
 ### Materiales
 
